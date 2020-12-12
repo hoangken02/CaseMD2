@@ -6,13 +6,14 @@ public class MainCuaMenu {
     static Scanner scanner = new Scanner(System.in);
 
     public static void menuChinh() {
+        QuanLyPhong.layDanhSachPhongTuFile();
         System.out.println("--------------------------------------------------------------");
         System.out.println("Hà Nội: " + date);
         System.out.println("Chào mừng bạn đến với chức năng quản lý quán trọ của chúng tôi");
         System.out.println("1.Khách đặt phòng: ");
         System.out.println("2.Khách trả phòng: ");
         System.out.println("3.Sửa thông tin phòng: ");
-        System.out.println("4.Sắp xếp khách hàng theo tên: ");
+        System.out.println("4.Sắp xếp khách hàng theo phòng: ");
         System.out.println("5.Tìm kiếm khách hàng theo tên: ");
         System.out.println("6.Thoát: ");
         System.out.println("--------------------------------------------------------------");
@@ -27,12 +28,17 @@ public class MainCuaMenu {
                 break;
             case 2:
                 QuanLyPhong.khachTraPhong();
+                menuChinh();
                 break;
             case 3:
                 QuanLyPhong.suaThongTin();
+                menuChinh();
                 break;
             case 4:
                 QuanLyPhong.sapXepPhongTheoTen();
+                QuanLyPhong.hienThiDSP();
+                menuChinh();
+                break;
             case 5:
                 QuanLyPhong.timKhachTheoTen();
                 break;

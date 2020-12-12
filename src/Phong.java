@@ -5,6 +5,7 @@ public class Phong {
     public static final int gia = 10000;
     private String ngayThue;
     private String thoiHanThue;
+    private KhachHang khachHang;
 
     public Phong() {
     }
@@ -14,14 +15,6 @@ public class Phong {
         this.id = id;
         this.ngayThue = ngayThue;
         this.thoiHanThue = thoiHanThue;
-    }
-
-    public String getTenKhachHang() {
-        return tenPhong;
-    }
-
-    public void setTenKhachHang(String tenKhachHang) {
-        this.tenPhong = tenKhachHang;
     }
 
     public int getId() {
@@ -52,6 +45,22 @@ public class Phong {
         this.thoiHanThue = thoiHanThue;
     }
 
+    public String getTenPhong() {
+        return tenPhong;
+    }
+
+    public void setTenPhong(String tenPhong) {
+        this.tenPhong = tenPhong;
+    }
+
+    public KhachHang getKhachHang() {
+        return khachHang;
+    }
+
+    public void setKhachHang(KhachHang khachHang) {
+        this.khachHang = khachHang;
+    }
+
     @Override
     public String toString() {
         return "Phong{" +
@@ -61,5 +70,9 @@ public class Phong {
                 ", ngayThue='" + ngayThue + '\'' +
                 ", thoiHanThue='" + thoiHanThue + '\'' +
                 '}';
+    }
+
+    public String stringToFile() {
+        return tenPhong + "," + id + "," + ngayThue + "," + thoiHanThue + "," + khachHang.toFile();
     }
 }

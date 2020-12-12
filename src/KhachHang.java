@@ -1,4 +1,4 @@
-public class KhachHang extends Phong {
+public class KhachHang {
     private String tenKhachHang;
     private String gioiTinh;
     private int tuoi;
@@ -54,5 +54,8 @@ public class KhachHang extends Phong {
                 ", tuoi=" + tuoi +
                 ", cMND=" + cMND +
                 '}';
+    }
+    public String toFile(){
+        return tenKhachHang + "," + gioiTinh + "," + tuoi + "," + cMND;
     }
 }
