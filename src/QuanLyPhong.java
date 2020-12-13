@@ -48,7 +48,8 @@ public class QuanLyPhong {
                 System.out.println("Số tiền trả: " + soTien);
                 danhSachPhong.remove(phong);
                 VietRaFile.writePhongToFile(danhSachPhong);
-                return;
+                hienThiDSP();
+                MainCuaMenu.menuChinh();
             }
         System.out.println("Khong tim thay phong");
         }
@@ -63,7 +64,7 @@ public class QuanLyPhong {
         for (int i = 0; i < danhSachPhong.size(); i++) {
             if (tenNhapVao.equals(danhSachPhong.get(i).getKhachHang().getTenKhachHang())) {
                 System.out.println("tìm thấy:   " +  danhSachPhong.get(i).getKhachHang().toString());
-                return;
+                MainCuaMenu.menuChinh();
             }
         }
         System.out.println("Khong tim thay");
@@ -78,7 +79,7 @@ public class QuanLyPhong {
                 int indexRemove = danhSachPhong.indexOf(danhSachPhong.get(i));
                 danhSachPhong.remove(indexRemove);
                 choThuePhong();
-                return;
+                MainCuaMenu.menuChinh();
             }
         }
         System.out.println("Khong tim thay phong");
